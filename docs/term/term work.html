@@ -8,23 +8,26 @@
 		}
 		.link {
 			position: fixed;
-  			display: flex;
-	        border-radius: 10px;
-	        background-color: white;
+  		display: flex;
+	    border-radius: 10px;
+	    background-color: white;
 			margin: 10px;
-	        padding-top: 5px;
-	        padding-bottom: 5px;
-	        padding-right: 10px;
-	        padding-left: 10px;
-	        flex-direction: row;
+	    padding-top: 5px;
+	    padding-bottom: 5px;
+	    padding-right: 10px;
+	    padding-left: 10px;
+	    flex-direction: row;
 			flex-wrap: wrap;
-
+			bottom: 10px;
+			margin-left: 70px;
 			
 
 		}
 		.link a{
 			margin: 10px;
 		}
+
+
 		.menu {
 			position: fixed;
 			margin-top: 10px;
@@ -65,67 +68,61 @@
 		.link img:hover{opacity: 0.6;}
 		.header img:hover{opacity: 0.9;}
 		.menu li:hover{opacity: 0.6;}
+
 		.menu_bottom span :hover{
 			opacity: 0.8;
-			color: ##6cadaf;
+			color: #6cadaf;
 		}
 
 		.menu a{
 			color: inherit;
-    		text-decoration: none;
+    	text-decoration: none;
 			font-family: sans-serif;
 			margin: 10px;
+			padding: 8px 8px 8px 32px;
+		  text-decoration: none;
+		  color: #818181;
+		  display: block;
+		  transition: 0.3s;
 			
 		}
+		.menu a:hover {
+		  color: #6cadaf;
+		  opacity: 0.8;
+		}
+
 		.menu ul{
 			list-style: none;
 			display: flex;
-	        
-			margin: 0px;
-	        padding: 10px;
-	        flex-direction: column;
+			margin: -20px;
+	    padding: 10px;
+	    flex-direction: column;
 			flex-wrap: wrap;
+
 		}
 		
 		.list{
-			font-size: 25px;
+			font-size: 20px;
 			text-align: center;
+
 			color: rgb(79,99,108);
 			
 		}
 
 
 		.menu {
-		  height: 100%; /* 100% Full-height */
-		  width: 0; /* 0 width - change this with JavaScript */
-		  position: fixed; /* Stay in place */
-		  z-index: 1; /* Stay on top */
-		  top: 0; /* Stay at the top */
+		  height: 100%; 
+		  width: 0; 
+		  position: fixed; 
+		  z-index: 1;
+		  top: 0; 
 		  left: 0;
-		  background-color: rgb(220,202,188); /* Black*/
-		  overflow-x: hidden; /* Disable horizontal scroll */
-		  padding-top: 60px; /* Place content 60px from the top */
-		  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+		  background-color: #accfd1;
+		  overflow-x: hidden; 
+		  padding-top: 60px; 
+		  transition: 0.5s; 
+
 		}
-
-		/* The navigation menu links */
-		.menu a {
-		  padding: 8px 8px 8px 32px;
-		  text-decoration: none;
-		  font-size: 25px;
-		  color: #818181;
-		  display: block;
-		  transition: 0.3s;
-		}
-
-		/* When you mouse over the navigation links, change their color */
-		.menu a:hover {
-		  color: ##6cadaf;
-
-		  opacity: 0.8;
-		}
-
-		/* Position and style the close button (top right corner) */
 		.menu .closebtn {
 		  position: absolute;
 		  top: 0;
@@ -135,12 +132,16 @@
 		}
 		.menu_bottom{
 			position: fixed;
-			
-		  
-
+		  text-align: center;
+		  height: 100%;
+		  width: 70px;
+		  margin: 2px;
+		  float: left;
+		  background-color: #6cadaf;
 		}
-		.menu_bottom img {
-			
+		#main {
+		  transition: margin-left .5s;
+		  padding: 20px;
 		}
 
 
@@ -148,15 +149,17 @@
 	</style>
 
 	<script type="text/javascript">
-        /* Set the width of the side navigation to 250px */
-        function openNav() {
-          document.getElementById("mymenu").style.width = "11%";
-        }
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+	    function openNav() {
+	      document.getElementById("mymenu").style.width = "200px";
+	      document.getElementById("main").style.marginLeft = "130px";
+	    }
 
-        /* Set the width of the side navigation to 0 */
-        function closeNav() {
-          document.getElementById("mymenu").style.width = "0";
-      }
+	    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+	    function closeNav() {
+	      document.getElementById("mymenu").style.width = "0";
+	      document.getElementById("main").style.marginLeft = "0";
+	    }
 
     </script>
 
@@ -171,21 +174,19 @@
 		<li>
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		</li>
-
-
 		<li>
 			<a href="#top">
-				<span class="list">Top</span>
+				<span class="list">TOP</span>
 			</a>
 		</li>
 		<li>
 			<a href="#introduce">
-				<span class="list">Introduce</span>
+				<span class="list">INTRODUCE</span>
 			</a>
 		</li>
 		<li>
 			<a href="#songs">
-				<span class="list">Songs</span>
+				<span class="list">SONGS</span>
 			</a>
 		</li>
 
@@ -193,7 +194,7 @@
 </div>
 
 <div class="menu_bottom">
-	<span onclick="openNav()"><a href="#"><img src="./IMG/menu.png"width="40%"></a></span>
+	<span onclick="openNav()"><a href="javascript:void(0)"><img src="./IMG/menu.png"width="70px"></a></span>
 </div>
 
 
@@ -207,10 +208,12 @@
 
 
 
-<div class="link">
-	<a href=https://twitter.com/nbuna_staff target="_blank"> <img src="./IMG/twiter.png"width="30"></a>
-	<a href=https://www.youtube.com/c/nbuna target="_blank"> <img src="./IMG/youtube.png"width="30"></a>
-	<a href=https://www.instagram.com/yorushika_official_/?hl=zh-tw target="_blank"> <img src="./IMG/ig.png"width="30"></a>
+<div id="main">
+    <div class="link">
+      <a href=https://twitter.com/nbuna_staff target="_blank"> <img src="./IMG/twiter.png"width="30"></a>
+      <a href=https://www.youtube.com/c/nbuna target="_blank"> <img src="./IMG/youtube.png"width="30"></a>
+      <a href=https://www.instagram.com/yorushika_official_/?hl=zh-tw target="_blank"> <img src="./IMG/ig.png"width="30"></a>
+    </div>
 </div>
 
 
